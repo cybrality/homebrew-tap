@@ -6,6 +6,8 @@ class Peercloak < Formula
   homepage "https://peercloak.com"
   version "0.1.0"
 
+  depends_on "wireguard-go" if OS.mac?
+
   on_macos do
     if Hardware::CPU.intel?
       url "https://releases.peercloak.com/releases/v0.1.0/peercloak_0.1.0_darwin_amd64.tar.gz"
